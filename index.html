@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>portfolio</title>
+    </head>
+    <body>
+       <nav>
+        <button onclick="Showsection('aboutme')">about me</button>
+        <button onclick="Showsection('projects')">projects</button>
+        <button onclick="Showsection('skills')">skills</button>
+       </nav>
+       <header>
+        <section id="aboutme">
+            <h3>About Me</h3>
+            <p>Hi, I'm Naga Nischay, a passionate software developer with a strong background in computer science. I have experience in various programming languages and frameworks, and I enjoy creating innovative solutions to complex problems. In my free time, I like to explore new technologies and contribute to open-source projects.</p>
+        </section>
+        <section id="projects">
+            <h3>projects</h3>
+            <p>here are the some of the projects I have worked on:</p>
+            <ul>
+                <li><strong>Portfolio Website</strong></li>
+            </ul>
+        </section>
+        <section id="skills">
+            <h3>Skills</h3>
+            <p>Here are some of the skills I have:</p>
+            <ul>
+                <li>programming language:python,javascript,c</li>
+                <li>Tools: Git, Docker</li>
+                <li>others: Problem-solving, Communication</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h3>Contact</h3>
+            <p>You can reach me at naganischay06@gmail.com</p>
+        </section>
+       </header>
+
+
+
+       <footer>
+        <a href="https://www.linkedin.com/in/naga-nischay-260835343/?skipRedirect=true">linkedIn</a> |
+        <a href = "https://github.com/nischay25/portfolio">github</a>
+       </footer>
+       <script>
+            function Showsection(sectionId){
+                const sections =document.querySelectorAll('section');
+                sections.forEach(section => section.classList.add('hidden'));
+                document.getElementById(sectionId).classList.remove('hidden');
+            }
+       </script>
+    </body>
+</html>
