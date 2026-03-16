@@ -2,12 +2,18 @@
 <html>
     <head>
         <title>portfolio</title>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
     </head>
     <body>
        <nav>
         <button onclick="Showsection('aboutme')">about me</button>
         <button onclick="Showsection('projects')">projects</button>
         <button onclick="Showsection('skills')">skills</button>
+        <button onclick="Showsection('contact')">contact</button>
        </nav>
        <header>
         <section id="aboutme">
@@ -31,8 +37,20 @@
             </ul>
         </section>
         <section id="contact">
-            <h3>Contact</h3>
-            <p>You can reach me at naganischay06@gmail.com</p>
+
+        <h2>Contact Me</h2>
+
+        <form>
+          <label for ="name">Name:</label>  
+        <input type ="name" placeholder="Your Name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type ="email" id="email" placeholder="Your Email"><br><br>
+        <label for="message">Message:</label>
+        <input type="text" id="message" placeholder="Your Message"><br><br>
+`       <button type="submit">Submit</button>
+        </form>
+
         </section>
        </header>
 
@@ -44,9 +62,7 @@
        </footer>
        <script>
             function Showsection(sectionId){
-                const sections =document.querySelectorAll('section');
-                sections.forEach(section => section.classList.add('hidden'));
-                document.getElementById(sectionId).classList.remove('hidden');
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
             }
        </script>
     </body>
