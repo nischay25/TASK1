@@ -29,41 +29,73 @@
                     transition: background-color 0.3s, color 0.3s;
                 }
                 nav button:hover{
-                    color: #a198af;
+                    background-color: #ffffff;
+                    color: black;
 
                 }
                 header{
-                    gap:20px;
-                    align-self: auto;
-                    diaplay:flex;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 20px;
+                }
+                main{
+                    flex-direction: column;
+                    align-self: center;
+                    display: flex;
                 }
                 section{
-                    margin: 20px;
-                    padding: 20px;
-                    border: 1px solid rgb(29, 11, 11);
-                    border-radius: 10px;
+                        background: rgba(255, 255, 255, 0.05);
+                        backdrop-filter: blur(10px);
+                        margin: 20px auto;
+                        width: 80%;
+                        padding: 20px;
+                        transition: transform 0.3s;
+                        border-radius: 10px;
+                }
+                section:hover {
+                    transform: translateY(-5px);
                 }
                 footer{
                     text-align: center;
                     padding: 20px;
                     background-color:linear-gradient(to right, #191521, #381d16);
                 }
-                .submit-button:hover{
-                    background-color: #a198af;
+                .submit-button{
+                    background-color: transparent;
                     color: white;
+                    border: 1px solid rgb(118, 116, 116);
+                    cursor: pointer;
+                    transition: background-color 0.3s, color 0.3s;
                 }
-                
-                
+                .submit-button:hover {
+                background-color: #ffffff;
+                color: black;
+                }
+                header{
+                    align-items: center;
+                    padding: 30px;
+                }
+                 textarea {
+                    width: 100%;
+                    height: 80px;
+        }
+
+        
         </style>
     </head>
     <body class="body">
+        <header class="header">
+            <h1>V.Naga Nischay</h1>
+            <p>CSE Student | Machine Learning & AI Explorer | Curious About Data, Tech & Product</p>
+            </header>
        <nav>
         <button onclick="Showsection('aboutme')">about me</button>
         <button onclick="Showsection('projects')">projects</button>
         <button onclick="Showsection('skills')">skills</button>
         <button onclick="Showsection('contact')">contact</button>
        </nav>
-       <header>
+       <main>
         <section id="aboutme">
             <h3>About Me</h3>
             <p>Hi, I'm Naga Nischay, a passionate software developer with a strong background in computer science. I have experience in various programming languages and frameworks, and I enjoy creating innovative solutions to complex problems. In my free time, I like to explore new technologies and contribute to open-source projects.</p>
@@ -72,16 +104,15 @@
             <h3>projects</h3>
             <p>here are the some of the projects I have worked on:</p>
             <ul>
-                <li><strong>Portfolio Website</strong></li>
-            </ul>
+                <li><strong>Portfolio Website</strong> – Personal website using HTML, CSS</li>
         </section>
         <section id="skills">
             <h3>Skills</h3>
             <p>Here are some of the skills I have:</p>
             <ul>
-                <li>programming language:python,javascript,c</li>
-                <li>Tools: Git, Docker</li>
-                <li>others: Problem-solving, Communication</li>
+                <li>programming language:python,javascript,c.</li>
+                <li>Tools: Git, Docker.</li>
+                <li>others: Problem-solving, Communication.</li>
             </ul>
         </section>
         <section id="contact">
@@ -96,11 +127,11 @@
         <input type ="email" id="email" placeholder="Your Email"><br><br>
         <label for="message">Message:</label>
         <input type="text" id="message" placeholder="Your Message"><br><br>
-      <button type="submit">Submit</button>
+      <button type="submit" class="submit-button">Submit</button>
         </form>
 
         </section>
-       </header>
+       </main>
 
 
 
