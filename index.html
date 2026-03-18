@@ -6,9 +6,38 @@
             html {
                 scroll-behavior: smooth;
             }
+            .body{
+                background: linear-gradient(to right, #381d16, #23123f);
+                color: white;
+                margin: 0%;
+                align-self: auto;
+
+            }       
+            nav{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+            }
+                nav button{
+                    background-color: transparent;
+                    border: 2px solid white;
+                    color: white;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+                nav button:hover{
+                    color: #a198af;
+                }
+                header{
+                    gap:20px;
+                }
+                
         </style>
     </head>
-    <body>
+    <body class="body">
        <nav>
         <button onclick="Showsection('aboutme')">about me</button>
         <button onclick="Showsection('projects')">projects</button>
